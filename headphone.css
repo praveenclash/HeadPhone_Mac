@@ -1,0 +1,1320 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -10;
+  opacity: 60%;
+  /* filter: blur(5px); */
+}
+
+.notic{
+  width: 100%;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  width: 100%;
+  /* margin: 10px; */
+  /* margin-left: 50px; */
+  /* margin-right: 50px; */
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.411);
+  backdrop-filter: blur(100px);
+  padding: 17px;
+  /* border-radius: 20px; */
+  border: 0.1px rgba(142, 145, 140, 0.945) solid;
+  cursor: pointer;
+
+  animation: nav ease-in-out;
+  animation-timeline: scroll();
+  animation-range: entry 5% cover 10%;
+  
+}
+@keyframes nav {
+  0%{
+    background-color: rgba(0, 0, 0, 0.411);
+    transform: translateY(-100px);
+  }
+
+  50%{
+    background-color: rgba(0, 0, 0, 0.411);
+    transform: translateY(-80px);
+  }
+
+  100%{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.411);
+    transform: translateY(0px);
+  }
+  
+}
+
+
+
+li {
+
+  font-size: 15px;
+  transition: all ease-in-out 0.5s;
+}
+
+
+li:hover {
+  transition: all ease-in-out 0.5s;
+  transform: scale(1.1);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: -5px;
+  transition: all ease-in-out 1s;
+  border-radius: 30px;
+ 
+}
+
+.search input {
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  margin: 5px;
+  color: rgba(0, 0, 0, 0.589);
+  width: 1px;
+  transition: all ease-in-out 1s;
+  position: relative;
+  left: 5px;
+}
+input:hover {
+  width: 150px;
+}
+
+.search:hover {
+  background-color: rgba(185, 182, 182, 0.219);
+}
+
+
+/* ----------------------------------------------------------- */
+
+.bg{
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  top: 26px;
+  background: url(output-onlinepngtools\ \(1\).png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.iconsfirstpage{
+  background-color: white;
+  width: 28%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+  top: -155px;
+  border-radius: px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  
+}
+
+.iconcontent{
+  margin: 5px;
+  text-align: center;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+}
+
+
+.iconcontent:hover{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.692);
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+
+
+span{
+  font-size: 10px;
+  /* letter-spacing: 0.5px; */
+}
+
+.titel{
+  position: relative;
+  top: 270px;
+  justify-content: center;
+}
+
+.titel h1{
+  color: rgba(245, 244, 237, 0.918);
+  font-size: 75px;
+  text-shadow: 4px 2px 4px black;
+}
+
+h2{
+  color: rgb(222, 184, 135);
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  top: 20px;
+  left: 35%;
+  position: relative;
+  text-shadow: 2px 2px 1px black; 
+}
+
+.png{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; 
+  align-items: center;
+}
+
+/*************** buy text animatins ***********************/
+
+
+.buy{
+  background-color: rgb(0, 0, 0);
+  width: fit-content;
+  padding: 8px;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  position: relative;
+  top: -20px;
+  left: 35%;
+  /* border: 0.4px rgb(255, 255, 255) solid;
+  box-shadow: 2px 6px 7px black; */
+  
+}
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.buy::after , .buy::before{
+  --angle:0deg;
+   content: "";
+   background: conic-gradient(from var(--angle), red 0%, rgba(255, 255, 0, 0.596) 25%, green 50%, rgba(69, 66, 224, 0.562) 75%);
+   left: -2.5px;
+   top: -2.5px;
+   position: absolute;
+   padding: 53px ;
+   padding-left: 166px;
+   padding-bottom: 7px;
+   width: fit-content;
+   z-index: -1;
+   border-radius: 24px;
+   animation:  3s spin linear infinite;
+}
+
+.buy::before{
+  filter: blur(2.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin{
+  from{
+    --angle:0deg;
+  }
+  to{
+    --angle:360deg;
+  }
+}
+/*************** buy text animatins ***********************/
+
+.page2 {
+  width: 100%;
+  height: 190vh;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.page2h1{
+   color: rgb(10, 10, 10);
+   font-size: 50px;
+   text-align: center;
+
+   animation: page2h1 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 80%;
+}
+@keyframes page2h1 {
+  0%{
+    
+   
+    transform: translateY(500px);
+  }
+
+  100%{
+    opacity: 100%;
+    transform: translateY(00px);
+  }
+}
+
+
+
+.warpper{
+  width: 100%;
+  height: 155vh;
+  background-color: rgba(211, 203, 203, 0.534);
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+
+  animation: warpperani linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+  transition: all ease-in-out 1s;
+  animation-delay: 2s;
+}
+
+
+@keyframes warpperani {
+  0%{
+    transform: translateY(500px);
+    
+  }
+
+  100%{
+   
+    transform: translateY(00px);
+  }
+}
+
+.container1{
+  margin-top: 15px;
+}
+.box1,.box2{
+  width: 500px  ;
+  height: 450px;
+  display: flex;
+  object-fit: cover;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 5px rgba(46, 48, 37, 0.486)solid;
+  margin: 25px;
+  transition: all ease-in-out 1s;
+}
+
+.box1:hover,.box2:hover,.container2:hover{
+  transition: all ease-in-out 1s;
+  border: 2px rgba(46, 48, 37, 0.486)solid;
+}
+
+
+.box1,.box2,img{
+  position: relative;
+  left: 0px;
+  opacity: 96%;
+  
+  transition: all ease-in-out 1s;
+  animation: imagebox12 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 45%;
+  
+}
+.box1,.box2,.boximg:hover{
+  scale: 1.05;
+  opacity: 100%;
+  
+}
+
+
+@keyframes imagebox12 {
+  0%{
+    opacity: 0%;
+    scale: 0.6;
+    transform: translateY(500px);
+  }
+
+  100%{
+    opacity: 100%;
+    transform: translateY(00px);
+  }
+}
+
+
+.box1 p{
+  position: relative;
+  top: -450px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  margin: 40px;
+  color:rgb(53, 35, 35) ;
+  opacity: 0%;
+  transition: all ease-in-out 1s;
+  transform: scale(0.9);
+}
+.box1:hover p{
+  opacity: 100%;
+  transform: scale(1);
+}
+
+
+.box2 p{
+  font-weight: bold;
+  color:rgb(53, 35, 35) ;
+  position: relative;
+  bottom: 400px;
+  margin: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  opacity: 0%;
+  transition: all ease-in-out 1s;
+  transform: scale(0.9);
+}
+
+.box2:hover p{
+  opacity: 100%;
+  transform: scale(1);
+}
+
+.container2 p{
+  position: relative;
+  bottom: 850px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  color:rgb(53, 35, 35) ;
+  opacity: 0%;
+  transition: all ease-in-out 1s;
+  transform: scale(0.9);
+}
+
+.container2:hover p{
+  opacity: 100%;
+  transform: scale(1);
+}
+
+.container2{
+  margin-top: 20px;
+  width: 500px  ;
+  height: 950px;
+  overflow: hidden;
+  margin-left: 20px;
+  object-position: center;
+  /* background-color: blue; */
+  border-radius: 50px;  
+  border: 5px rgba(46, 48, 37, 0.486)solid;
+  transition: all ease-in-out 1s;
+
+  animation: containerimag linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 26%;
+}
+
+@keyframes containerimag{
+  from{
+      transform: translateY(500px);
+      scale: 0.5;
+      opacity: 50%;
+  }
+  to{
+    transform: translateY(00px);
+    opacity: 100%;
+  }
+}
+
+.container2 img{
+  width: 1000px;
+  height: 100%;
+  position: relative;
+  left: -440px;
+  transform: translateX(00px);
+
+}
+
+.container2 img:hover{
+  transform: translateX(130px);
+}
+
+/* ------------------------------side  button animation------------------ */
+
+.sildebttonpage2{
+  background-color: rgba(138, 123, 123, 0.253);
+  width: fit-content;
+  padding: 10px;
+  backdrop-filter: blur(30px);
+  border-radius: 80px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  left: 43%;
+  bottom: 10%;
+  border: 0.01px rgba(24, 23, 23, 0.26) solid;
+  display: flex;
+
+   
+
+  animation: sildebtn3page2 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 10%;
+  transition: all ease-in-out 1s;
+  animation-delay: 1s;
+}
+
+
+
+@keyframes sildebtn3page2 {
+  0%{
+    scale: 0.1;
+    opacity: 0%;
+    bottom: 16%;
+    
+  }
+
+  100%{
+    
+    
+    scale: 1.06;
+  }
+}
+
+.buttonpage2{
+  background: none;
+  border: none;
+  margin: 0px;
+  color: rgba(3, 3, 3, 0.863);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.buttonpage2:hover{
+  scale: 1.05;
+  color: rgba(3, 3, 3, 0.623);
+}
+
+/* ----------------------------side button animtion------------------- */
+
+/* ********************************************************************** */
+/* --------------------------  page  3  -------------------------------- */
+/* ************************************************************************ */
+
+.page3 {
+  width: 100%;
+  height: 220vh;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.page3h1{
+  color: rgba(10, 10, 10, 0.74);
+  font-size: 60px;
+  text-align: center;
+
+  animation: page3h1 linear;
+ animation-timeline: view();
+ animation-range: entry 0% cover 50%;
+}
+@keyframes page3h1 {
+ 0%{
+   
+  
+   transform: translatey(500px);
+ }
+
+ 100%{
+   opacity: 100%;
+   transform: translatex(00px);
+ }
+}
+
+.headphonecolors{
+  display: flex;
+  height: 100vh;
+  overflow: scroll;
+  background-color: rgba(211, 203, 203, 0.534) ;
+  border-radius: 30px;
+  margin: 10px;
+  position: relative;
+
+  
+  animation: aircolors linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+  transition: all ease-in-out 1s;
+  animation-delay: 2s;
+}
+
+
+@keyframes aircolors {
+  0%{
+   opacity: 0%;
+   scale: 0.5;
+   transform: translateY(900px);
+    
+  }
+
+  100%{
+   opacity: 100%;
+  
+  }
+}
+
+
+.headphonecolors img{
+  margin: 25px;
+  margin-top: 65px;
+  border-radius: 20px;
+  box-shadow: 0px 1px 5px black;
+  width: auto;
+  height: 500px;
+  opacity: 100%;
+}
+
+/* ------------------------------side  button animation------------------ */
+
+.sildebtton{
+  background-color: rgba(138, 123, 123, 0.253);
+  width: fit-content;
+  padding: 10px;
+  backdrop-filter: blur(30px);
+  border-radius: 80px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  left: 39%;
+  bottom: 10%;
+  border: 0.01px rgba(24, 23, 23, 0.26) solid;
+   
+
+  animation: sildebtn3 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 10%;
+  transition: all ease-in-out 1s;
+  animation-delay: 1s;
+}
+
+
+
+@keyframes sildebtn3 {
+  0%{
+    scale: 0.1;
+    opacity: 0%;
+    bottom: 16%;
+    
+  }
+
+  100%{
+    
+    
+    scale: 1.06;
+  }
+}
+
+button{
+  background: none;
+  border: none;
+  margin: 0px;
+  color: rgba(3, 3, 3, 0.863);
+  margin-left: 0px;
+  margin-right: 0px;
+}
+button:hover{
+  scale: 1.05;
+  color: rgba(3, 3, 3, 0.623);
+}
+
+/* ----------------------------side button animtion------------------- */
+.page3h3{
+  font-size: 30px;
+  margin-top: 90px;
+  font-family: "Poppins", sans-serif;
+  margin-left: 120px;
+  margin-bottom: 20px;
+
+  animation: page3text linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 56%;
+}
+
+@keyframes page3text{
+  from{
+      transform: translateY(500px);
+      opacity: 0%;
+  }
+  to{
+    transform: translateY(00px);
+    opacity: 100%;
+  }
+}
+
+
+table{
+  font-family: "Poppins", sans-serif;
+  margin: 100px;
+  margin-top: 0px;
+  text-align: left;
+  justify-content: center;
+  cursor: pointer;
+
+  animation: tabletext ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 46%;
+}
+
+@keyframes tabletext{
+  from{
+      transform: translateY(1000px);
+      opacity: 0%;
+  }
+  to{
+    transform: translateY(00px);
+    opacity: 100%;
+  }
+}
+
+
+th{
+   font-size: 24px;
+   padding: 20px;
+   text-align: start; 
+   color: rgba(0, 0, 0, 0.829);
+   
+}
+
+.td1{
+  padding: 20px;
+  text-align: start; 
+  border-bottom:1px rgba(0, 0, 0, 0.349) solid;
+  letter-spacing: 1px;
+}
+
+td{
+  padding: 20px;
+  text-align: start; 
+  letter-spacing: 1px;
+}
+
+
+
+/* **************************************************************************************************************************************************** */
+/* page 4 */
+/* **************************************************************************************************************************************************** */
+
+.page4 {
+  width: 100%;
+  height: 300vh;
+  background-image: url(womanpage4.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color-burn;
+  overflow-wrap: anywhere;
+}
+
+.page4h1{
+  color: rgba(255, 255, 255, 0.911);
+  top: 2%;
+  position: relative;
+  font-size: 90px;
+  text-align: center;
+
+  animation: page4h1 linear;
+ animation-timeline: view();
+ animation-range: entry 0% cover 40%;
+}
+@keyframes page4h1 {
+ 0%{
+   
+  scale: 0.5;
+   transform: translatey(500px);
+ }
+
+ 100%{
+   opacity: 100%;
+   transform: translatex(00px);
+ }
+}
+
+
+.page4h2{
+  color: rgba(255, 255, 255, 0.911);
+  top: 0%;
+  width: 800px;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  font-size:20px;
+  text-align: center;
+  font-weight: bolder;
+  box-shadow: none;
+  text-shadow: none;
+  transform: translateX(-200px);
+
+animation: page4h2 linear;
+animation-timeline: view();
+ animation-range: entry 0% cover 40%;
+}
+@keyframes page4h2 {
+ 0%{
+   opacity: 0%;
+   
+ }
+
+ 100%{
+  opacity: 90%;
+ }
+}
+
+
+
+/* ------------------------------side  button animation------------------ */
+
+.sildebttonpage4{
+  background-color: rgba(138, 123, 123, 0.253);
+  width: fit-content;
+  padding: 10px;
+  backdrop-filter: blur(30px);
+  border-radius: 80px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  left: 36%;
+  bottom: 10%;
+  border: 0.01px rgba(24, 23, 23, 0.26) solid;
+  display: flex;
+
+   
+
+  animation: sildebtn3page4 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 10%;
+  transition: all ease-in-out 1s;
+  animation-delay: 1s;
+}
+
+
+
+@keyframes sildebtn3page4 {
+  0%{
+    scale: 0.1;
+    opacity: 0%;
+    bottom: 16%;
+    
+  }
+
+  100%{
+    
+    
+    scale: 1.06;
+  }
+}
+
+.buttonpage4{
+  background: none;
+  border: none;
+  margin: 0px;
+  color: rgba(3, 3, 3, 0.863);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.buttonpage4:hover{
+  scale: 1.05;
+  color: rgba(3, 3, 3, 0.623);
+}
+
+/* ----------------------------side button animtion------------------- */
+
+
+
+
+
+/* **************************************************************************************************************************************************** */
+/* page 5 */
+/* **************************************************************************************************************************************************** */
+
+.page5 {
+  width: 100%;
+  height: 235vh;
+  background-color: white;
+  
+}
+
+.bgmain{
+  width: 100%;
+  height: 70vh;
+  
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  margin-bottom: 0%;
+  padding-bottom:0% ;
+
+}
+
+
+.outbox{
+  color: rgb(10, 10, 10);
+  /* background: rgb(13, 146, 106); */
+  margin: 14px;
+  justify-content: space-evenly;
+  text-align: center;
+  flex: 1;
+  padding: 25px;
+  height: 190px;
+  overflow: hidden;
+  margin-bottom: 0%;
+  padding-bottom:0% ;
+  margin-top: 60px;
+
+  transition: all ease-in-out 1s;
+  flex-direction: row;display: flex;
+  animation: page5h1 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  animation-delay: 2s;
+ }
+ @keyframes page5h1 {
+  0%{
+    
+   scale: 0.5;
+    transform: translatey(700px);
+  }
+ 
+  100%{
+    opacity: 100%;
+    transform: translatey(0px);
+  }
+ }
+
+
+.inbox{
+  flex-direction: row;
+  /* background: rgb(122, 146, 13); */
+  padding: 5px;
+  position: relative;
+  top: 30px;
+  justify-content: center; 
+  transition: all ease-in-out 1s;
+  padding: 20px;
+
+  margin-bottom: 0%;
+  padding-bottom:0% ;
+}
+
+.outbox:hover .inbox{
+  top: -17px;
+  background: none;
+  transition: all ease-in-out 1s;
+  scale: 1.1;
+  
+}
+
+.inbox p{
+  margin: 12px;
+  width: 100%;
+  height: fit-content;
+  
+}
+
+.outbox:hover{
+  margin-top: 20px;
+  transition: all ease-in-out 0.5s;
+  height: 510px;
+  flex: 1;
+  scale: 1.04;
+  border: 0.1px rgba(0, 0, 0, 0.521) solid;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.521),2px 5px 9px rgba(0, 0, 0, 0.521) ,2px 22px 13px rgba(0, 0, 0, 0.521) ,2px 23px 24px rgba(0, 0, 0, 0.521)  ;
+}
+
+
+.page5h1{
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  
+}
+
+.page5h1box{
+  margin: 100px;
+  display: flex;
+  justify-content: space-between;
+
+  animation: page5h1box ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 45%;
+  animation-delay: 2s;
+ }
+ @keyframes page5h1box {
+  0%{
+    
+   
+    transform: translatey(700px);
+  }
+ 
+  100%{
+    opacity: 100%;
+    transform: translatey(10px);
+  }
+ }
+
+.page5h1box a{
+  justify-content: last baseline;
+  position: relative;
+  top: 150px;
+}
+
+.carddeliveryemoji{
+  display: flex;
+  width: 100%;
+  /* overflow: hidden; */
+  height: fit-content;
+}
+
+.incarddeliveryemoji{
+  background-color: rgba(0, 0, 0, 0.836);
+  color: white;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex: 1;
+  margin: 10px;
+  border-radius: 20px;
+
+  transition: all ease-in-out 0.3s;
+  animation: deliveryemoji linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+ 
+ }
+ @keyframes deliveryemoji {
+  0%{
+    scale: 0.5 ;
+    opacity: 20%;
+    transform: translateY(500px);
+  }
+ 
+  100%{
+     opacity: 100%;
+  }
+ }
+
+.incarddeliveryemoji:hover ,#cardiconpage5{
+  scale: 1.02;
+  bottom: 8px;
+  position: relative;
+  transition: all ease-in-out 0.3s;
+  color: rgba(200, 255, 0, 0.774);
+}
+.page5header{
+   font-size: 25px;
+   color: white;
+}
+
+header{
+  color: rgba(255, 255, 255, 0.555);
+}
+
+#cardiconpage5{
+  font-size: 40px;
+  margin-top: -10px;
+  padding: 5px;
+}
+
+#page5pluse{
+      font-size: 40px;
+      color: black;
+      background-color: white;
+      width: fit-content;
+      padding: 15px;
+      border-radius: 50%;
+      position: relative;
+      left: 235px;
+      top: 35px;
+      border: px black solid;
+      transition: all ease-in-out 0.2s;
+}
+
+#page5pluse:hover{
+  scale: 1.04;
+  background-color: rgba(200, 255, 0, 0.966);
+  color: rgb(15, 14, 14);
+  transition: all ease-in-out 0.2s;
+}
+
+
+.page5h12{
+  font-family: "Poppins", sans-serif;
+  font-size: 65px;
+  text-align: center;
+  margin-top: 120px;
+  
+
+  animation: page5h12 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 45%;
+  transition: all ease-in-out 1s;
+  animation-delay: 2s;
+}
+
+
+@keyframes page5h12 {
+  0%{
+    transform: translateY(500px);
+    scale: 0;
+  }
+
+  100%{
+   
+    transform: translateY(00px);
+  }
+}
+
+/* **************************************************************************************************************************************************** */
+/* page 6 */
+/* **************************************************************************************************************************************************** */
+
+.page6 {
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(135, 125, 148, 0.5);
+  backdrop-filter: blur(0px);
+  filter: blur(10px);
+  z-index: 1;
+  position: relative;
+}
+.collectionomainbox{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 2;
+  position: absolute;
+  transform: translateY(-550px); 
+}
+.collectionoutbox{
+  background-color: rgb(0, 0, 0);
+  width: 300px;
+  height: 470px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 10px;
+  border: 1px black solid;
+}
+.collectionoutbox img{
+  position: relative;
+  left: -10px;
+  z-index: 2;
+  transition: all ease-in-out 0.5s;
+}
+
+.collectionoutbox p{
+  position: relative;
+  z-index: 3;
+  font-size: 10px;
+  bottom: 0px;
+  
+  background-color: black;
+  color: rgba(245, 245, 245, 0.514);
+  font-weight: normal;
+  letter-spacing: 1px;
+  padding: 25px;
+  padding-bottom: 35px;
+  margin: px;
+  border-radius: 20px;
+  transition: all ease-in-out 1s;
+}
+
+.collectionoutbox span{
+  font-size: 15px;
+  color: whitesmoke;
+}
+
+.collectionoutbox img:hover{
+  scale: 1.05;
+  opacity: 80%;
+  border: none;
+}
+
+.collectionoutbox:hover p{
+  position: relative;
+  bottom: 150px;
+  transition: all ease-in-out 0.5s;
+}
+
+/* **************************************************************************************************************************************************** */
+/* page 7 */
+/* **************************************************************************************************************************************************** */
+
+
+.page7 {
+  margin-top: -200px;
+  width: 100%;
+  height: 380vh;
+  background-color: whitesmoke;
+}
+
+
+.page7h1{
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  
+}
+
+.page7h1box{
+  margin-top:200px;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  animation: page7h1box ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 45%;
+  animation-delay: 2s;
+ }
+ @keyframes page7h1box {
+  0%{
+    
+   
+    transform: translatey(700px);
+  }
+ 
+  100%{
+    opacity: 100%;
+    transform: translatey(0px);
+  }
+ }
+
+.page7h1box a{
+  justify-content: last baseline;
+  position: relative;
+  top: 30px;
+}
+
+.finalbox{
+  width: 90%;
+  height: 302vh;
+  background-color: white;
+  position: absolute;
+  left: 5%;
+  border-radius: 50px;
+  margin-top: 40px;
+  
+
+}
+
+.finalul{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border: none;
+  margin: 0%;
+}
+
+ol img{
+  width: 30%;
+}
+
+ol{
+  background-color: transparent;
+  margin: 10px;
+  
+}
+
+
+/* ------------------------------side  button animation------------------ */
+
+.sildebttonpage7{
+  background-color: rgba(138, 123, 123, 0.253);
+  width: fit-content;
+  padding: 10px;
+  backdrop-filter: blur(30px);
+  border-radius: 80px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  left: 36%;
+  bottom: 10%;
+  border: 0.01px rgba(24, 23, 23, 0.26) solid;
+  display: flex;
+
+   
+
+  animation: sildebtn3page7 linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 10%;
+  transition: all ease-in-out 1s;
+  animation-delay: 1s;
+}
+
+
+
+@keyframes sildebtn3page7 {
+  0%{
+    scale: 0.1;
+    opacity: 0%;
+    bottom: 16%;
+    
+  }
+
+  100%{
+    
+    
+    scale: 1.06;
+  }
+}
+
+.buttonpage7{
+  background: none;
+  border: none;
+  margin: 0px;
+  color: rgba(3, 3, 3, 0.863);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.buttonpage7:hover{
+  scale: 1.05;
+  color: rgba(3, 3, 3, 0.623);
+}
+
+/* ----------------------------side button animtion------------------- */
